@@ -1,0 +1,42 @@
+.Shows{
+  border: 0.5rem solid rgb(148, 148, 148);
+  background-color: rgb(72, 25, 46);
+  color: rgb(200, 200, 200);
+  align-items: center;
+  text-align: center;
+}
+
+.Shows>h2{
+  align-items: center;
+  text-align: center;
+}
+
+.ShowData{
+  margin-left: 30rem;
+  margin-right: 30rem;
+  align-items: center;
+  text-align: center;
+  /* display: flex; */
+  gap:10rem;
+  border: 0.1rem solid purple;
+  /* margin-right: -10rem; */
+}
+/* .ShowData>:nth-child(1){
+  padding: 2rem;
+}
+.ShowData>:nth-child(2){
+  padding: 2rem;
+  text-align: left;
+} */
+
+.ShowData>div>button{
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: rgb(188, 159, 216);
+     color: black;
+     transition: all 0.2s linear;
+     border-radius: 0.5rem;
+} 
+.ShowData>div>button:hover{
+    background-color: rgb(149, 97, 199);
+} 

@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Shows from './Components/Shows';
+import MoreInfo from './Components/MoreInfo';
+import { BrowserRouter as Router, Routes, Route }
+    from 'react-router-dom';
 
-function App() {
+const App = () => {
+  const [selectedShow, setSelectedShow] = useState(null);
+
+  const handleSelectShow = (show) => {
+    setSelectedShow(show);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {selectedShow ? (
+        <MoreInfo show={selectedShow} />
+      ) : (
+        <Shows onSelect={handleSelectShow} />
+      )}
     </div>
   );
-}
+
+
+
+};
 
 export default App;
